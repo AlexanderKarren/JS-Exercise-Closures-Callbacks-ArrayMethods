@@ -95,6 +95,7 @@ function processSum(numberList, callback) {
   }
   return callback(listSum);
 }
+// working
 
 /**
  * ### Challenge `processProduct`
@@ -118,6 +119,7 @@ function processProduct(num1, num2, callback) {
   let product = num1 * num2;
   return callback(product);
 }
+// working
 
 /**
  * ### Challenge `processContains`
@@ -139,8 +141,15 @@ function processProduct(num1, num2, callback) {
  * "lady gaga" and `['foo', 'bar']` and `(bool) => bool ? 'nice!' : 'sad'`,
  * should return "sad".
 */
-function processContains(/* CODE HERE */) {
-  /* CODE HERE */
+function processContains(item, list, callback) {
+  let itemPresent = false;
+  for (let i = 0; i < list.length; i++) {
+    if (list[i] === item) {
+      itemPresent = true;
+      break;
+    }
+  }
+  return callback(itemPresent);
 }
 
 /**
